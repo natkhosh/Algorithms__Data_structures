@@ -13,8 +13,14 @@ def min_search(arr: Sequence) -> int:
 	:param arr: Array containing numbers
 	:return: index of first occurrence of minimal element in array
 	"""
-	print(arr)
-	return -1
+
+	min_ = arr[0]
+	for i in range(len(arr)):
+		if min_ > arr[i]:
+			min_ = arr[i]
+			index = i
+
+	return index
 
 def finding_element(find_element, array):
 	index = None
@@ -32,3 +38,4 @@ if __name__== "__main__":
 	find_element = np.random.choice(array)
 	np.random.shuffle(array)
 	print(finding_element(find_element, array))
+	print(min_search(array))
