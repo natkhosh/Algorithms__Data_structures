@@ -10,3 +10,4 @@ def stairway_path(stairway: Sequence[Union[float, int]]) -> Union[float, int]:
 	"""
 	print(stairway)
 	return 0
+
