@@ -54,6 +54,7 @@ if __name__ == "__main__":
 	)
 
 	graph.add_node('Z')
+	graph.add_node('Y')
 	graph.add_node('X')
 	src = "A"
 	dst = "X"
