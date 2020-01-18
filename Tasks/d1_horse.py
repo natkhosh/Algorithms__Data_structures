@@ -33,8 +33,6 @@ def calculate_paths(shape: (int, int), point: (int, int)) -> int:
 					F[i + 2, j - 1] += F[i, j] * 2
 
 
-
-
 	print(F)
 
 	#print(shape, point)
