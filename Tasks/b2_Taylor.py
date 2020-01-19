@@ -31,18 +31,15 @@ def sinx(x: Union[int, float], delta=0.0001) -> float:
 	:param x: x value
 	:return: sin(x) value
 	"""
-	if x == 0:
-		return 0
-	else:
-		result_sin = 1
-		n = 1
-		while True:
-			result_ = ((-1) ** n) * ((x ** (2 * n + 1)) / (math.factorial(2 * n + 1)))
-			if abs(result_) < result_sin - delta:
-				return result_ #result_sin
-			else:
-				#result_sin += result_
-				n += 1
+	result_sin = 0
+	n = 0
+	while True:
+		result_ = (((-1) ** n) * (x ** (2 * n + 1))) / (math.factorial(2 * n + 1))
+		result_sin += result_
+		if abs(result_) < delta:
+			return result_sin
+		else:
+			n += 1
 
 
 if __name__ == "__main__":
