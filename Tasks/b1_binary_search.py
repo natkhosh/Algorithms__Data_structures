@@ -11,7 +11,6 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 	:param arr: array where element is to be found
 	:return: Index of element if it's presented in the arr, None otherwise
 	"""
-
 	index = None
 	left = 0
 	right = len(arr) - 1
@@ -39,7 +38,7 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 if __name__ == "__main__":
 	n = 10
 	array = np.arange(n)
-	element = 11
+	element = 9
 	#element = np.random.choice(array)
 	print(array, element)
 	print(binary_search(element, array))
