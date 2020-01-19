@@ -36,11 +36,7 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 	return index
 
 
-	#print(elem, arr)
-	# return None
-
-
-if __name__== "__main__":
+if __name__ == "__main__":
 	n = 10
 	array = np.arange(n)
 	element = 11
