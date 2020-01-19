@@ -34,7 +34,7 @@ def sinx(x: Union[int, float], delta=0.0001) -> float:
 	result_sin = 0
 	n = 0
 	while True:
-		result_ = (((-1) ** n) * (x ** (2 * n + 1))) / (math.factorial(2 * n + 1))
+		result_ = ((-1) ** n) * (x ** (2 * n + 1)) / (math.factorial(2 * n + 1))
 		result_sin += result_
 		if abs(result_) < delta:
 			return result_sin
