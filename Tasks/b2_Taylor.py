@@ -4,10 +4,10 @@ Taylor series
 from typing import Union
 import math
 
+
 def ex(x: Union[int, float], delta=0.0001) -> float:
 	"""
 	Calculate value of e^x with Taylor series
-
 	:param x: x value
 	:return: e^x value
 	"""
@@ -24,18 +24,24 @@ def ex(x: Union[int, float], delta=0.0001) -> float:
 				result_sum += result
 				n += 1
 
-	print(x)
 
-
-
-def sinx(x: Union[int, float]) -> float:
+def sinx(x: Union[int, float], delta=0.0001) -> float:
 	"""
 	Calculate sin(x) with Taylor series
-
 	:param x: x value
 	:return: sin(x) value
 	"""
-	print(x)
-	return 0
+	result_sin = 0
+	n = 0
+	while True:
+		result_ = ((-1) ** n) * (x ** (2 * n + 1)) / (math.factorial(2 * n + 1))
+		result_sin += result_
+		if abs(result_) < delta:
+			return result_sin
+		else:
+			n += 1
 
 
+if __name__ == "__main__":
+	#print(ex(1.55433))
+	print(sinx(1.55433))
