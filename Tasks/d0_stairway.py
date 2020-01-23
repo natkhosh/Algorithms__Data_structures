@@ -29,5 +29,3 @@ def stairway_path(stairway: Sequence[Union[float, int]]) -> Union[float, int]:
 if __name__ == "__main__":
 	stairway = [3, 5, 2, 0, 2, 8, 4, 10, 3]
 	print(stairway)
-	stairway_sum = [999] * len(stairway)
-	print(stairway_path(stairway))
