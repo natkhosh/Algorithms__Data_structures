@@ -37,6 +37,7 @@ def bfs_find(graph,src, dst):
 
 
 if __name__ == "__main__":
+
 	graph = nx.Graph()
 	graph.add_nodes_from("ABCDEFG")
 	graph.add_edges_from(
@@ -52,9 +53,10 @@ if __name__ == "__main__":
 	)
 
 	src = "A"
-	dst = "G"
+	dst = "F"
 
 	print(bfs_find(graph, src, dst))
+	# print(graph)
 
 
 
